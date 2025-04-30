@@ -1,1 +1,0 @@
-This is the source code of Yuanlin Zhang's public academic website: https://zason.github.io

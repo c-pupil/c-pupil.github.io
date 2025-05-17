@@ -132,16 +132,28 @@ To further validate the robustness and applicability of our approach, we present
             <h1 class="section-name"> Abstract </h1>
                 <p class="section-content-text">
 
-                    Underwater optical imaging constitutes a crucial modality for acquiring marine information and plays an indispensable role in a wide range of fields, including ocean engineering, subsea resource exploration,
-                    and geoscience and remote sensing. Maintaining consistent performance in supervised underwater image enhancement (UIE) models across
-                    diverse real-world scenarios is challenging due to the inherent complexity of underwater environments and the limited availability of
-                    diverse datasets. To address this, we propose a novel UIE framework that adaptively and training-free transforms complex underwater
-                    images into more manageable known degraded images. This process effectively preserves the semantic content of the input images. Subsequently, we employ diffusion to transition from the known degraded domain distribution to the target reference domain distribution,
-                    thereby achieving effective and consistent enhancement across various underwater scenarios. To ensure the efficacy and flexibility of the
-                    diffusion process, our approach operates in latent space rather than pixel space,
-                    utilizing a novel Markov chain specifically tailored for underwater scenes. This method not only reduces the numerous sampling steps but also minimizes color shifts during the sampling process.
-                    Furthermore, we introduce a Content Consistency Module (CCM) to improve structural consistency. Experimental results demonstrate that <b>W2WDiff</b> outperforms state-ofthe-art methods,
-                    exhibiting robust zero-shot generalization capabilities.
+                    Underwater image enhancement (UIE) is essential
+                    for underwater information acquisition across marine science and
+                    ocean remote sensing. Diffusion-based UIE methods demonstrate
+                    remarkable enhancement capabilities but suffer significant performance degradation when test-time observations diverge from
+                    training-time assumptions. Moreover, the inherent stochasticity
+                    of the diffusion process often manifests as inconsistent and
+                    unstable enhancement results, compromising both reproducibility
+                    and quality assurance. To address these limitations, we propose
+                    <b>W2WDiff</b>, a novel framework that introduces an unsupervised
+                    water-to-water transformation strategy. By mapping heterogeneous underwater degradations to a tractable intermediate domain, our method circumvents the distribution shift problem
+                    inherent in direct enhancement approaches, achieving superior
+                    generalization across diverse underwater scenarios. In contrast to
+                    general pixel-space methods, we establish the feasibility of latent space UIE and introduce a corresponding diffusion paradigm.
+                    Our approach introduces a custom Markov chain specifically
+                    designed for underwater characteristics, achieving substantial
+                    reductions in sampling steps while mitigating color distortion.
+                    Furthermore, we propose a three-stage training scheme along
+                    with a Content Consistency Module (CCM) to mitigate pixel-level misalignment and enhance local structural fidelity and
+                    detail preservation. Comprehensive experiments demonstrate
+                    that <b>W2WDiff</b> achieves consistent and robust enhancement across
+                    a wide range of challenging underwater conditions, exhibiting
+                    strong zero-shot generalization performance.
 
                 </p>
             </div>
